@@ -28,6 +28,9 @@
 #include "periodic_tasks_exec.h"
 #include "periodic_tasks_modules.h"
 
+//////////////////////////////////////////
+#include "drivers_HAL/fsl_gpio.h"
+//////////////////////////////////////////
 
 /**************************************************************
  *  Name                 : periodic_tasks_exec_5tks
@@ -109,21 +112,33 @@
  *  Critical/explanation : no
  **************************************************************/
  void periodic_tasks_exec_500tks(void)
- {
+  {
+ 	 GPIO_TogglePinsOutput(GPIOB,1<<19);
+ 	 for (uint32_t i = 0; i < 2400000; i++)
+ 	 {
+ 		 __NOP();
+ 	 }
+ 	 GPIO_TogglePinsOutput(GPIOB,1<<19);
+  }
 
- }
- 
- /**************************************************************
- *  Name                 : periodic_tasks_exec_1Mtks
- *	ID					 : TASK_1MTKS
- *  Description          : Container for functionality that is 
-                           executed periodically.
- *  Parameters           : none
- *  Return               : none
- *  Critical/explanation : no
- **************************************************************/
- void periodic_tasks_exec_1Mtks(void)
- {
-	 app_rgb_led_fsm();
- }
- 
+  /**************************************************************
+  *  Name                 : periodic_tasks_exec_1Mtks
+  *	ID					 : TASK_1MTKS
+  *  Description          : Container for functionality that is
+                            executed periodically.
+  *  Parameters           : none
+  *  Return               : none
+  *  Critical/explanation : no
+  **************************************************************/
+  void periodic_tasks_exec_1Mtks(void)
+  {
+ 	 //app_rgb_led_fsm();
+ 	 GPIO_TogglePinsOutput(GPIOB,1<<18);
+ 	 for (uint32_t i = 0; i < 10000000; i++)
+ 	 {
+ 		 __NOP();
+ 	 }
+ 	 GPIO_TogglePinsOutput(GPIOB,1<<18);
+  }
+
+
