@@ -8,7 +8,7 @@
 * created_by:      MDRR
 * date_created:    July 31 2013 
 *=============================================================================*/
-/* DESCRIPTION : Header of the core of the "Grandpa´s Clock Scheduler"        */
+/* DESCRIPTION : Header of the core of the "Grandpaï¿½s Clock Scheduler"        */
 /*============================================================================*/
 /* FUNCTION COMMENT : Header of the main scheduler file with                  */
 /* initailization and manager                                                 */

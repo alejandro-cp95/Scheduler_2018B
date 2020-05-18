@@ -9,7 +9,7 @@
 * date_created:    July 31 2013 
 *=============================================================================*/
 /* DESCRIPTION : Header of the configuartion file of the                      */
-/* "Grandpa´s Clock Scheduler" core                                           */
+/* "Grandpaï¿½s Clock Scheduler" core                                           */
 /*============================================================================*/
 /* FUNCTION COMMENT : Header of the configurationfor the scheduler            */
 /*                                                                            */
@@ -85,6 +85,6 @@ PUBLIC_DATA const S_SCH_MANAGER_EXEC_TYPE cps_mngTaskList[SCHD_MANAGERS_NUMBER];
 /* This callback must be used to enable interrupts */
 //#define gsc_sch_enable_interrupts_cb() 		asm(" CPSIE i");/* Put here the function of the platform used to enable interrupts */
 
-
+extern volatile T_DelayMainType lasw_MngTimeCnt[SCHD_MANAGERS_NUMBER];
 
 #endif /* GSC_SCH_CORE_CFG_H */
